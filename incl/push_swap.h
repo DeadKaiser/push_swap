@@ -58,5 +58,6 @@ char				**ft_split(char const *s, char c);
 size_t				count_words(char const *s, char c);
 void				check_num_list(int list_size, t_node **stack);
 t_node				sorted_n(t_node **stack);
+void				push_b(t_node **lst_a, t_node **lst_b);
 
 #endif
