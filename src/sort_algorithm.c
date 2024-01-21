@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:28:26 by ozini             #+#    #+#             */
-/*   Updated: 2024/01/21 15:10:23 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:40:10 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,20 +72,4 @@ t_node *get_min(t_node *stack)
 	}
 	return (temp_min);
 }
-/* t_node *get_min(t_node *head) {
 
-	t_node *temp_min;
-
-    int min_value = head->value;
-    t_node *current = head->next;
-
-    while (current != NULL) {
-        if (current->value < min_value) {
-			temp_min = current;
-            min_value = current->value;
-        }
-        current = current->next;
-    }
-
-    return temp_min;
-} */
