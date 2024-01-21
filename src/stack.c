@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 00:12:39 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:57:27 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 12:57:36 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,12 @@ void	ft_lstadd_back(t_node **lst, t_node *new)
 	(*lst)->next = new;
 }
 
+void	ft_lstadd_front(t_node **lst, t_node *new)
+{
+	new->next = *lst;
+	*lst = new;
+}
 
-//ft_lstnew
 t_node	*ft_lstnew(int value)
 {
 	t_node	*new;

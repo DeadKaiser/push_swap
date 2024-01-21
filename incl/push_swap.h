@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 17:32:14 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 14:01:52 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ char				**ft_split(char const *s, char c);
 size_t				count_words(char const *s, char c);
 void				check_num_list(int list_size, t_node **stack);
 t_node				sorted_n(t_node **stack);
-void				push_b(t_node **lst_a, t_node **lst_b);
+void				push(t_node **first_list, t_node **second_list);
+void				pa(t_node **first_list, t_node **second_list);
+void				pb(t_node **first_list, t_node **second_list);
+void				ft_lstadd_front(t_node **lst, t_node *new);
+void				get_target_node(t_node *stack_a, t_node *stack_b);
+t_node				*get_min(t_node *stack);
 
 #endif

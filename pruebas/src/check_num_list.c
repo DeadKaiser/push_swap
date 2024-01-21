@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 17:37:25 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 12:52:10 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	check_num_list(int list_size, t_node **stack)
 		is_sorted_2(*stack);
 	else if (list_size == 3)
 		sorted3(&(*stack));
-	else
-		sort_n(&(*stack));
+	/* else
+		sort_n(&(*stack)); */
 	a = *stack;
 	while ((*stack))
 	{
