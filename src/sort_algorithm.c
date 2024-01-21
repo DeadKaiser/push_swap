@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_algorithm.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:28:26 by ozini             #+#    #+#             */
-/*   Updated: 2024/01/21 15:49:55 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/21 16:45:39 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,58 @@ t_node	*get_min(t_node *stack)
 		stack = stack->next;
 	}
 	return (temp_min);
+}
+
+void	get_node_position_and_half(t_node *stack)
+{
+	int	i;
+	int	size;
+
+	i = 0;
+	size = ft_lstsize(stack);
+	while (stack)
+	{
+		if (i <= (size / 2))
+			stack->upper_half = true;
+		stack->node_position = i++;
+		stack = stack->next; 
+	}
+
+}
+
+void	get_cost(t_node *stack)
+{
+	int size;
+
+	size = ft_lstsize(stack);
+	while(stack)
+	{
+		if(stack->upper_half)
+			stack->cost = stack->node_position;
+		else
+			stack->cost = size - stack->node_position;
+		stack = stack->next;
+	}
+}
+
+t_node	*get_cheapest(t_node *stack_b)
+{
+	int		cheapest;
+	int		costs;
+	t_node	*cheapest_node;
+
+	cheapest_node = stack_b;
+	cheapest = (stack_b->cost) + (stack_b->target_node->cost);
+	stack_b = stack_b->next;
+	while (stack_b)
+	{
+		costs = stack_b->cost + stack_b->target_node->cost;
+		if (costs < cheapest)
+		{
+			cheapest = costs;
+			cheapest_node = stack_b;
+		}
+		stack_b = stack_b->next;
+	}
+	return (cheapest_node);
 }

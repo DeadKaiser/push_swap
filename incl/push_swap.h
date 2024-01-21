@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 14:01:52 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 16:45:56 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,8 @@ void				pb(t_node **first_list, t_node **second_list);
 void				ft_lstadd_front(t_node **lst, t_node *new);
 void				get_target_node(t_node *stack_a, t_node *stack_b);
 t_node				*get_min(t_node *stack);
+void				get_node_position_and_half(t_node *stack);
+void				get_cost(t_node *stack);
+t_node				*get_cheapest(t_node *stack_b);
 
 #endif
