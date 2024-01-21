@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:49:04 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:23:21 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:53:07 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,11 @@ int	main(int argc, char **argv)
 	int		words_num;
 	int		list_size;
 
-	//atexit(ft_leaks);
-
 	i = 1;
 	stack_a = NULL;
+
+	//atexit(ft_leaks);
+	
 	while (i < argc)
 	{
 		words = ft_split(argv[i], ' ');

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 00:12:39 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 12:57:36 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:54:13 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ t_node	*ft_lstnew(int value)
 	return (new);
 }
 
-//ft_lstsize
 int	ft_lstsize(t_node *lst)
 {
 	size_t	i;
@@ -60,30 +59,11 @@ int	ft_lstsize(t_node *lst)
 	}
 	return (i);
 }
-// stack_new
-/* t_node	*stack_new(int value)
-{
-	t_node	*new;
 
-	new = malloc(sizeof(t_node));
-	if (!new)
-		return (NULL);
-	new->value = value;
-	new->node_position = 0;
-	new->cost = 0;
-	new->cheapest = false;
-	new->upper_half = false;
-	new->target_node = NULL;
-	//new->index = 0;
-	new->next = NULL;
-	return (new);
-} */
-//free stack
 void	free_stack(t_node **stack)
 {
 	t_node	*tmp;
 
-	//if (!stack || !(*stack))
 	if (!(*stack))
 		return ;
 	while (*stack)

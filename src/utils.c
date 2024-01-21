@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 00:15:37 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:24:46 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:51:19 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ t_node	*get_bottom(t_node *stack)
 		stack = stack->next;
 	return (stack);
 }
+
 t_node	*before_bottom(t_node *stack)
 {
 	while (stack && stack->next->next != NULL)

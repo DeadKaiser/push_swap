@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 12:58:46 by ozini             #+#    #+#             */
-/*   Updated: 2024/01/21 13:19:56 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:53:27 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	push(t_node **first_list, t_node **second_list)
 
 	first_node = *first_list;
 	*first_list = (*first_list)->next;
-
 	first_node->next = NULL;
 	ft_lstadd_front(&(*second_list), first_node);
 }

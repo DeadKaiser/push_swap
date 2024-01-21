@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 13:51:46 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:24:34 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:51:01 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 static void	swap(t_node **stack)
 {
 	t_node	*tmp;
-    t_node  *tmp2;
-    int     tmp_value;
+	t_node	*tmp2;
+	int		tmp_value;
 
 	if (!*stack || (*stack)->next == NULL)
 		return ;
 	tmp = *stack;
-    tmp2= tmp ->next;
-    tmp_value = tmp -> value;
-    tmp -> value = tmp2 -> value;
-    tmp2 -> value = tmp_value;
-	
+	tmp2 = tmp->next;
+	tmp_value = tmp->value;
+	tmp->value = tmp2->value;
+	tmp2->value = tmp_value;
 }
 
 void	sa(t_node **stack_a)

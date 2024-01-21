@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 15:06:30 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/21 15:49:13 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,12 @@ void	check_num_list(int list_size, t_node **stack)
 	{
 		printf("El valor de la lista es %d\n", (*stack)->value);
 		(*stack) = (*stack)->next;
-	} */
+	}
 	while ((stack_b))
 	{
 		printf("El valor de la lista es %d y su target node es %d\n", (stack_b)->value, stack_b->target_node->value);
 		(stack_b) = (stack_b)->next;
-	}
+	} */
 	if (a)
 		free_stack(&a);
 }
