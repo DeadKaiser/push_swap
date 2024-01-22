@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/22 14:51:35 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 15:50:04 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,15 +59,22 @@ void	check_num_list(int list_size, t_node **stack)
 			}
 			 while (b)
 			{
-				printf("el numero es %d upper_half %d , el target node es : %d y su coste del nodo es %d y de su target node el coste es %d", (b)->value,(b) ->upper_half, (b) -> target_node-> value, (b) ->cost , (b) -> target_node -> cost);
+				printf("el numero es %d, su posición es %d y su upper_half %d , el target node es : %d y su coste del nodo es %d y de su target node el coste es %d", (b)->value, (b)->node_position, (b) ->upper_half, (b) -> target_node-> value, (b) ->cost , (b) -> target_node -> cost);
 				(b) = (b)->next;
 			} 
 			move_nodes(cheapest, &(*stack), &stack_b);
 			pa(&stack_b,&(*stack));
-			a = *stack;
-			
 
 			printf("\n");
+			if (size == 1)
+			{
+				a = *stack;
+				while(a)
+				{
+					printf("El valor de la lista es %d y su posicion es %d\n", (a)->value, (a)->node_position);
+					a = a -> next;
+				}
+			}
 			/* while (b)
 			{
 				printf("el numero es %d, el target node es : %d y su coste del nodo es %d y de su target node el coste es %d", (b)->value,(b) -> target_node-> value, (b) ->cost , (b) -> target_node -> cost);
