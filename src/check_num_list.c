@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 16:52:03 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/22 11:52:07 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,26 +38,34 @@ void	check_num_list(int list_size, t_node **stack)
 		cheapest = get_cheapest(stack_b);
 
 		
+		/* while(size = ft_listsize(stack_b) > 0)
+    		get_init(stack_a, stack_b)
+    		move_node;
+    		pa(nodo_b);
+    		size--; */
+    
+
+		
 	}
 	a = *stack;
 /* 	while ((*stack))
 	{
 		printf("El valor de la lista es %d\n", (*stack)->value);
 		(*stack) = (*stack)->next;
-	}
-	while ((stack_b))
+	} */
+	/*while ((stack_b))
 	{
 		printf("El valor de la lista es %d y su target node es %d\n", (stack_b)->value, stack_b->target_node->value);
 		(stack_b) = (stack_b)->next;
 	} */
 	while ((*stack))
 	{
-		printf("El valor de la lista es %d, la posición es %d y el upper half es %d\n", (*stack)->value, (*stack)->node_position, (*stack)->upper_half);
+		printf("El valor de la lista A es %d, la posición es %d y el upper half es %d\n", (*stack)->value, (*stack)->node_position, (*stack)->upper_half);
 		(*stack) = (*stack)->next;
 	}
 	while ((stack_b))
 	{
-		printf("El valor de la lista es %d, la posición es %d, el upper half es %d y el coste es %d\n", (stack_b)->value, (stack_b)->node_position, (stack_b)->upper_half, (stack_b)->cost);
+		printf("El valor de la lista B es %d, la posición es %d, el upper half es %d y el coste es %d\n", (stack_b)->value, (stack_b)->node_position, (stack_b)->upper_half, (stack_b)->cost);
 		(stack_b) = (stack_b)->next;
 	}
 	printf("El valor del cheapest es el número %d y su coste es %d", cheapest->value, (cheapest->cost + cheapest->target_node->cost));
