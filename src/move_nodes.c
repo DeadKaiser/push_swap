@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:11:07 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/22 11:48:45 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:38:17 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 {
 	int i;
 	int j;
-
+    int x;
 	i = 0;
 	j = 0;
+
 	if (cheapest->upper_half && cheapest->target_node->upper_half)
 	{
 		if (cheapest->cost > cheapest->target_node->cost)
@@ -28,20 +29,21 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 		}
 		else
 		{
-			i = cheapest->cost;
-			j = cheapest->target_node->cost;
+			i = cheapest->cost; // -3 cost 0
+			j = cheapest->target_node->cost; // 9 cost 1
 		}
+        x = j - i;
 		while (i--)
 			rr(stack_a, stack_b);
-		while ((j - i > 0) && j == cheapest->cost)
+		while (x > 0 && j == cheapest->cost)
 		{
 			rb(stack_b);
-			i++;
+			x--; 
 		}
-		while ((j - i > 0) && j == cheapest->target_node->cost)
+		while (x > 0 && (j == cheapest->target_node->cost))
 		{
 			ra(stack_a);
-			i++;
+			x--;
 		}
 	}
 	else if ((cheapest->upper_half == false)
@@ -57,17 +59,18 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 			i = cheapest->cost;
 			j = cheapest->target_node->cost;
 		}
+        x = j - i;
 		while (i--)
 			rrr(stack_a, stack_b);
-		while ((j - i > 0) && j == cheapest->cost)
+		while (x > 0 && j == cheapest->cost)
 		{
 			rrb(stack_b);
-			i++;
+			x--;
 		}
-		while ((j - i > 0) && j == cheapest->target_node->cost)
+		while (x > 0 && j == cheapest->target_node->cost)
 		{
 			rra(stack_a);
-			i++;
+			x--;
 		}
 	}
 	else

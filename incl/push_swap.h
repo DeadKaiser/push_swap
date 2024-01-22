@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 16:45:56 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/22 11:59:02 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 # define PUSH_SWAP_H
 
 # include <limits.h>
+# include <stdbool.h>
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdbool.h>
 
 typedef struct t_list
 {
@@ -29,7 +29,7 @@ typedef struct t_list
 	bool			cheapest;
 	struct t_list	*target_node;
 	struct t_list	*next;
-}	t_node;
+}					t_node;
 
 void				check_input(char **str, int words_num, t_node **stack);
 int					ft_lstsize(t_node *lst);
@@ -67,5 +67,8 @@ t_node				*get_min(t_node *stack);
 void				get_node_position_and_half(t_node *stack);
 void				get_cost(t_node *stack);
 t_node				*get_cheapest(t_node *stack_b);
+t_node				*get_init(t_node **stack_a, t_node *stack_b);
+void				move_nodes(t_node *cheapest, t_node **stack_a,
+						t_node **stack_b);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_algorithm.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:28:26 by ozini             #+#    #+#             */
-/*   Updated: 2024/01/21 16:45:39 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/22 15:00:06 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,13 +66,17 @@ void	get_node_position_and_half(t_node *stack)
 
 	i = 0;
 	size = ft_lstsize(stack);
+	
 	while (stack)
-	{
-		if (i <= (size / 2))
+	{	
+		if ((i <= (size / 2) && (size % 2) != 0))
 			stack->upper_half = true;
+		else
+			stack->upper_half = false;
 		stack->node_position = i++;
 		stack = stack->next; 
 	}
+	
 
 }
 
