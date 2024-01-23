@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 14:12:40 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:23:39 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/23 16:18:04 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	rb(t_node **stack)
 
 void	rr(t_node **stack_a, t_node **stack_b)
 {
-	ra(stack_a);
-	rb(stack_b);
+	rotate(stack_a);
+	rotate(stack_b);
 	write(1, "rr\n", 3);
 }

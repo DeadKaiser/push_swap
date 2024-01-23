@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   move_nodes.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- < cosorio-@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:11:07 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:42:51 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:18:25 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 		}
 		else
 		{
-			i = cheapest->cost; // -3 cost 0
-			j = cheapest->target_node->cost; // 9 cost 1
+			i = cheapest->cost;
+			j = cheapest->target_node->cost;
 		}
         x = j - i;
 		while (i--)
 		{
-			ra(stack_a);
-			rb(stack_b);
+/* 			ra(stack_a);
+			rb(stack_b); */
+			rr(stack_a, stack_b);
 		}
-			//rr(stack_a, stack_b);
 		while (x > 0 && j == cheapest->cost)
 		{
 			rb(stack_b);
