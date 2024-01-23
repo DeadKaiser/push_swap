@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/22 15:50:04 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/23 12:19:27 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	check_num_list(int list_size, t_node **stack)
 	t_node	*stack_b;
 	t_node	*cheapest;
 	int		size;
-	t_node *b;
+	//t_node *b;
+	t_node	*final_min;
 
 
 	
@@ -43,16 +44,16 @@ void	check_num_list(int list_size, t_node **stack)
 		{
 
 			//printf("tamaño de lista A; %d\n",ft_lstsize(*stack));
-			printf("\n");
+			//printf("\n");
 			get_target_node(*stack, stack_b);
 			get_node_position_and_half(*stack);
 			get_node_position_and_half(stack_b);
 			get_cost(*stack);
 			get_cost(stack_b);
 			cheapest = get_cheapest(stack_b);
-			b = stack_b;
-			a = *stack;
-			while(a)
+/* 			b = stack_b;
+			a = *stack; */
+/* 			while(a)
 			{
 				printf("El valor de la lista es %d y su posicion es %d\n", (a)->value, (a)->node_position);
 				a = a -> next;
@@ -61,11 +62,11 @@ void	check_num_list(int list_size, t_node **stack)
 			{
 				printf("el numero es %d, su posición es %d y su upper_half %d , el target node es : %d y su coste del nodo es %d y de su target node el coste es %d", (b)->value, (b)->node_position, (b) ->upper_half, (b) -> target_node-> value, (b) ->cost , (b) -> target_node -> cost);
 				(b) = (b)->next;
-			} 
+			}  */
 			move_nodes(cheapest, &(*stack), &stack_b);
 			pa(&stack_b,&(*stack));
 
-			printf("\n");
+/* 			printf("\n");
 			if (size == 1)
 			{
 				a = *stack;
@@ -74,7 +75,7 @@ void	check_num_list(int list_size, t_node **stack)
 					printf("El valor de la lista es %d y su posicion es %d\n", (a)->value, (a)->node_position);
 					a = a -> next;
 				}
-			}
+			} */
 			/* while (b)
 			{
 				printf("el numero es %d, el target node es : %d y su coste del nodo es %d y de su target node el coste es %d", (b)->value,(b) -> target_node-> value, (b) ->cost , (b) -> target_node -> cost);
@@ -82,6 +83,34 @@ void	check_num_list(int list_size, t_node **stack)
 			}  */
 			size--;
 		}
+		//Función final para terminar de ordenar la lista.
+
+		get_node_position_and_half(*stack);
+		get_cost(*stack);
+		final_min = get_min(*stack);
+		a = *stack;
+		if (final_min->upper_half)
+		{
+			while(final_min->cost > 0)
+			{
+				ra(stack);
+				final_min->cost--;
+			}
+		}
+		else
+		{
+			while(final_min->cost > 0)
+			{
+				rra(stack);
+				final_min->cost--;
+			}
+		}
+/* 		while(a)
+		{
+			printf("El valor es %d\n", (a)->value);
+			a = a -> next;
+		} */
+
 	}
 
 	/* 	while ((*stack))

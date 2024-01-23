@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:11:07 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 11:31:27 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/23 12:20:02 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,6 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 		i = 0;
 		if (cheapest->target_node->upper_half && cheapest->upper_half == false)
 		{
-			//if(cheapest->value == 49)
-			printf("El coste del target de 49 (50) es %d y el valor de i es %d", cheapest->target_node->cost, i);
 			while ((cheapest->target_node->cost - i) > 0)
 			{
 				ra(stack_a);
