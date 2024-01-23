@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 16:55:29 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 16:56:08 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:58:23 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,22 @@ void	sorted3(t_node **stack)
 		sa(stack);
 }
 
+t_node	*get_init(t_node **stack_a, t_node *stack_b)
+{
+	t_node	*cheapest;
+
+	cheapest = NULL;
+	get_target_node(*stack_a, stack_b);
+	get_node_position_and_half(*stack_a);
+	get_node_position_and_half(stack_b);
+	get_cost(*stack_a);
+	get_cost(stack_b);
+	cheapest = get_cheapest(stack_b);
+	if (!cheapest)
+		return (cheapest);
+	return (cheapest);
+}
+
 void	polish_off(t_node **stack)
 {
 	t_node	*final_min;
@@ -62,7 +78,7 @@ void	polish_off(t_node **stack)
 	}
 }
 
-void sorted_n(t_node **stack, t_node *stack_b)
+void	sorted_n(t_node **stack, t_node *stack_b)
 {
 	t_node	*cheapest;
 	int		size;
@@ -79,5 +95,4 @@ void sorted_n(t_node **stack, t_node *stack_b)
 		size--;
 	}
 	polish_off(stack);
-    
 }

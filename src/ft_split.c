@@ -81,19 +81,3 @@ char	**ft_split(char const *s, char c)
 	set_mem(tab, s, c);
 	return (tab);
 }
-
-/* int main() {
-	char str[] = "10";
-
-	char **result = ft_split(str, ' ');
-
-	int i = 0;
-	while (result[i] != NULL) {
-		printf("%s\n", result[i]);
-		free(result[i]);
-		i++;
-	}
-	free(result);
-	return (0);
-} 
-  */

@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/21 13:28:26 by ozini             #+#    #+#             */
-/*   Updated: 2024/01/23 16:35:42 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:58:50 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,9 +66,8 @@ void	get_node_position_and_half(t_node *stack)
 
 	i = 0;
 	size = ft_lstsize(stack);
-	
 	while (stack)
-	{	
+	{
 		if (i <= (size / 2) && (size % 2 != 0))
 			stack->upper_half = true;
 		else if (i < (size / 2) && (size % 2 == 0))
@@ -76,19 +75,18 @@ void	get_node_position_and_half(t_node *stack)
 		else
 			stack->upper_half = false;
 		stack->node_position = i++;
-		stack = stack->next; 
+		stack = stack->next;
 	}
-
 }
 
 void	get_cost(t_node *stack)
 {
-	int size;
+	int	size;
 
 	size = ft_lstsize(stack);
-	while(stack)
+	while (stack)
 	{
-		if(stack->upper_half)
+		if (stack->upper_half)
 			stack->cost = stack->node_position;
 		else
 			stack->cost = size - stack->node_position;

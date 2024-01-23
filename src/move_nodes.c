@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/22 11:11:07 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 16:18:25 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 17:01:38 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
         x = j - i;
 		while (i--)
 		{
-/* 			ra(stack_a);
-			rb(stack_b); */
 			rr(stack_a, stack_b);
 		}
 		while (x > 0 && j == cheapest->cost)
@@ -114,11 +112,3 @@ void	move_nodes(t_node *cheapest, t_node **stack_a, t_node **stack_b)
 		}
 	}
 }
-
-
-/* while(size = ft_listsize(stack_b) > 0)
-    get_init(stack_a, stack_b)
-    move_node;
-    pa(nodo_b);
-    size--; */
-    
