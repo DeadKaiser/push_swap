@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:49:04 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/21 15:53:07 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:09:51 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 /* static void	ft_leaks()
 {
 	system("leaks push_swap");
-} */
+}  */
 
 int	main(int argc, char **argv)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- < cosorio-@student.42malaga.co    +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 14:43:03 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:08:54 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,6 +142,6 @@ void	check_num_list(int list_size, t_node **stack)
 	} */
 	//printf("El valor del cheapest es el número %d y su coste es %d",
 		//cheapest->value, (cheapest->cost + cheapest->target_node->cost));
-	if (a)
-		free_stack(&a);
+	if (*stack)
+		free_stack(&(*stack));
 }
