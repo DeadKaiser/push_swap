@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/22 11:59:02 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/23 16:52:28 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int					is_duplicated(t_node *list);
 char				**ft_split(char const *s, char c);
 size_t				count_words(char const *s, char c);
 void				check_num_list(int list_size, t_node **stack);
-t_node				sorted_n(t_node **stack);
+void				sorted_n(t_node **stack, t_node *stack_b);
 void				push(t_node **first_list, t_node **second_list);
 void				pa(t_node **first_list, t_node **second_list);
 void				pb(t_node **first_list, t_node **second_list);
@@ -70,5 +70,6 @@ t_node				*get_cheapest(t_node *stack_b);
 t_node				*get_init(t_node **stack_a, t_node *stack_b);
 void				move_nodes(t_node *cheapest, t_node **stack_a,
 						t_node **stack_b);
+void				polish_off(t_node **stack);
 
 #endif
