@@ -3,12 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- < cosorio-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 12:19:27 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/23 14:43:03 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+  // LISTA 10 : 7 5 1 4 10 9 3 2 8 6    
+
 
 #include "../incl/push_swap.h"
 
@@ -66,8 +69,8 @@ void	check_num_list(int list_size, t_node **stack)
 			move_nodes(cheapest, &(*stack), &stack_b);
 			pa(&stack_b,&(*stack));
 
-/* 			printf("\n");
-			if (size == 1)
+			//printf("\n");
+/* 			if (size == 1)
 			{
 				a = *stack;
 				while(a)
