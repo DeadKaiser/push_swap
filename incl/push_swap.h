@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/24 11:27:41 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/24 13:30:05 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct t_list
 }					t_node;
 
 void				check_input(char **str, int words_num, t_node **stack);
+int					higher_cost(t_node *cheapest, int *lower_cost);
 int					ft_lstsize(t_node *lst);
 t_node				*ft_lstnew(int value);
 void				ft_lstadd_back(t_node **lst, t_node *new);
@@ -72,5 +73,9 @@ t_node				*get_init(t_node **stack_a, t_node *stack_b);
 void				move_nodes(t_node *cheapest, t_node **stack_a,
 						t_node **stack_b);
 void				polish_off(t_node **stack);
+void				both_nodes_upper_half(t_node *cheapest, t_node **stack_a,
+						t_node **stack_b);
+void				both_nodes_lower_half(t_node *cheapest, t_node **stack_a,
+						t_node **stack_b);
 
 #endif

@@ -6,17 +6,11 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:49:04 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/24 12:53:01 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:38:15 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-
-
-/* static void	ft_leaks()
-{
-	system("leaks push_swap");
-}  */
 
 void	check_aux(char **argv, int i, t_node **stack_a)
 {
@@ -36,7 +30,6 @@ int	main(int argc, char **argv)
 
 	i = 1;
 	stack_a = NULL;
-	//atexit(ft_leaks);
 	while (i < argc)
 	{
 		check_aux(argv, i, &(stack_a));
@@ -47,12 +40,11 @@ int	main(int argc, char **argv)
 		}
 		i++;
 	}
-	if(stack_a)
+	if (stack_a)
 	{
 		list_size = ft_lstsize(stack_a);
 		if (!is_duplicated(stack_a))
 			check_num_list(list_size, &stack_a);
 		return (0);
 	}
-	
 }

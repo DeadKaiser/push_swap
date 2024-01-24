@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/01 13:51:46 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/22 13:12:24 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:38:36 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ static void	swap(t_node **stack)
 void	sa(t_node **stack_a)
 {
 	swap(stack_a);
-	write(1,"sa\n",3);
+	write(1, "sa\n", 3);
 }
 
 void	sb(t_node **stack_b)
 {
 	swap(stack_b);
-	write(1,"sb\n",3);
+	write(1, "sb\n", 3);
 }
 
 void	ss(t_node **stack_a, t_node **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
-	write(1,"ss\n",3);
+	write(1, "ss\n", 3);
 }

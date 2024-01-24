@@ -6,7 +6,7 @@
 /*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/24 13:06:52 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:36:02 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	check_num_list(int list_size, t_node **stack)
 
 	stack_b = NULL;
 	if (list_size == 1)
-		return;
+		return ;
 	else if (list_size == 2)
 		is_sorted_2(*stack);
 	else if (list_size == 3)

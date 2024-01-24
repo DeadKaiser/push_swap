@@ -81,13 +81,3 @@ char	**ft_split(char const *s, char c)
 	set_mem(tab, s, c);
 	return (tab);
 }
-
-/* int main(int argc, char **argv)
-{
-	char **cadenas;
-
-	cadenas = ft_split(argv[1], ' ');
-	if(!cadenas)
-		printf("Cadena nula");
-
-} */
