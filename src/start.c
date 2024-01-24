@@ -6,7 +6,7 @@
 /*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 00:31:44 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/19 16:24:25 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/24 12:43:31 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ void	check_input(char **str, int words_num, t_node **stack)
 			i++;
 		while (str[j][i] != '\0')
 		{
-			if (str[j][i] < '0' || str[j][i] > '9')
+			if (str[j][i] < '0' || str[j][i] > '9' ||
+				(ft_atol(str[j]) > INT_MAX) || (ft_atol(str[j]) < INT_MIN))
 			{
 				free_stack (stack);
 				(*stack) = NULL;
@@ -33,7 +34,7 @@ void	check_input(char **str, int words_num, t_node **stack)
 			}
 			i++;
 		}
-		ft_lstadd_back(stack, ft_lstnew(ft_atoi(str[j])));
+		ft_lstadd_back(stack, ft_lstnew(ft_atol(str[j])));
 		free(str[j]);
 		j++;
 	}
@@ -52,7 +53,10 @@ int	is_duplicated(t_node *list)
 		while (tmp2)
 		{
 			if (tmp->value == tmp2->value)
+			{
+				write(1, "Error\n", 6);
 				return (1);
+			}
 			tmp2 = tmp2->next;
 		}
 		tmp = tmp->next;

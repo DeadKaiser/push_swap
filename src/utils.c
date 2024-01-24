@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 00:15:37 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 17:00:43 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 11:08:24 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
-	int		nbr;
+	long	nbr;
 	int		sign;
 	size_t	i;
 

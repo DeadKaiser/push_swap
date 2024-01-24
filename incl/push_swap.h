@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
+/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 09:56:01 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/23 17:00:38 by cosorio-         ###   ########.fr       */
+/*   Updated: 2024/01/24 11:27:41 by ozini            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void				check_input(char **str, int words_num, t_node **stack);
 int					ft_lstsize(t_node *lst);
 t_node				*ft_lstnew(int value);
 void				ft_lstadd_back(t_node **lst, t_node *new);
-int					ft_atoi(const char *str);
+long				ft_atol(const char *str);
 void				is_sorted_2(t_node *list);
 void				sa(t_node **stack_a);
 void				sb(t_node **stack_a);
@@ -57,6 +57,7 @@ int					is_duplicated(t_node *list);
 char				**ft_split(char const *s, char c);
 size_t				count_words(char const *s, char c);
 void				check_num_list(int list_size, t_node **stack);
+void				check_aux(char **argv, int i, t_node **stack_a);
 void				sorted_n(t_node **stack, t_node *stack_b);
 void				push(t_node **first_list, t_node **second_list);
 void				pa(t_node **first_list, t_node **second_list);
