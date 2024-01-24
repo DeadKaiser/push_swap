@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_num_list.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:26:45 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/24 10:59:03 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/24 13:06:52 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 void	check_num_list(int list_size, t_node **stack)
 {
 	t_node	*stack_b;
-	t_node	*cheapest;
-	int		size;
 
-	cheapest = NULL;
 	stack_b = NULL;
-	size = 0;
 	if (list_size == 1)
 		return;
 	else if (list_size == 2)

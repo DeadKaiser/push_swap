@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ozini <ozini@student.42.fr>                +#+  +:+       +#+        */
+/*   By: cosorio- <cosorio-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:49:04 by cosorio-          #+#    #+#             */
-/*   Updated: 2024/01/24 12:20:29 by ozini            ###   ########.fr       */
+/*   Updated: 2024/01/24 12:53:01 by cosorio-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ void	check_aux(char **argv, int i, t_node **stack_a)
 	int		words_num;
 
 	words = ft_split(argv[i], ' ');
-	write(1, "Entra", 5);
 	words_num = count_words(argv[i], ' ');
-	write(1, "Entra", 5);
 	check_input(words, words_num, &(*stack_a));
 }
 
@@ -38,12 +36,10 @@ int	main(int argc, char **argv)
 
 	i = 1;
 	stack_a = NULL;
-	write(1, "Test", 4);
 	//atexit(ft_leaks);
 	while (i < argc)
 	{
 		check_aux(argv, i, &(stack_a));
-		write(1, "EntraFinal", 10);
 		if (!stack_a)
 		{
 			write(1, "Error\n", 6);
